@@ -78,7 +78,8 @@ public class crudservice {
 		while(rs.next()) {
 			crudmodel model = new crudmodel();
 			
-			model.setName(rs.getString("name")); //column name
+			model.setId(rs.getInt("id")); //column name
+			model.setName(rs.getString("name"));
 			model.setAge(rs.getInt("age"));
 			
 			data.add(model);
