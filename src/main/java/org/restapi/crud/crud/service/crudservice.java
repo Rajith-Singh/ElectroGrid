@@ -106,6 +106,23 @@ public class crudservice {
 		return user;
 	}
 	
+//	public crudmodel updateUser(crudmodel user) {
+//		String insert = "update person set name=?, age=? where id=?";
+//		
+//		try {
+//			PreparedStatement ps = con.prepareStatement(insert);
+//			ps.setInt(1, user.getId());
+//			ps.setString(2, user.getName());
+//			ps.setLong(3, user.getAge());
+//			
+//			ps.executeUpdate();
+//		}catch(Exception e) {
+//			System.out.println(e +"data update unsuccess");
+//		}
+//		
+//		return user;
+//	}
+	
 	
 	
 }
