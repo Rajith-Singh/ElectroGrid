@@ -50,7 +50,14 @@ public class crudresource {
 		return service.updateUser(user);
 	}
 	
-
+	@Path("/deleteUnitById/{id}")
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	public int deleteUnit(@PathParam("id") int id) {
+		return service.deleteUnit(id);
+	}
+	
+	
 
 
 
