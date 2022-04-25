@@ -43,6 +43,8 @@ public class crudservice {
 		return user;
 	}
 	
+	
+	
 	public ArrayList<crudmodel> getUser() throws SQLException{
 	
 		ArrayList<crudmodel> data = new ArrayList<crudmodel>();
@@ -87,6 +89,7 @@ public class crudservice {
 		
 		return data;
 	}
+	
 	
 	
 	public crudmodel updateUser(crudmodel user) {
