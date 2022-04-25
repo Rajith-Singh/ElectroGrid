@@ -29,12 +29,16 @@ public class crudresource {
 		return service.insertUser(user);
 	}
 	
+	
+	
 	@Path("/retrieve")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<crudmodel> getUser() throws SQLException {
 		return service.getUser();
 	}
+	
+	
 	
 	@Path("/retrieveById/{id}")
 	@GET
