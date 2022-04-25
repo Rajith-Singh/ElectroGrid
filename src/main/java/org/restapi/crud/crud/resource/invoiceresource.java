@@ -28,9 +28,9 @@ public class invoiceresource {
 		return service.insertInvoice(invoice);
 	}
 	
-//	@Path("/unit_retrieve")
-//	@GET
-//	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/retrieve_invoice")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
 //	public ArrayList<unitmodel> getUnit() throws SQLException {
 //		return service.getUnit();
 //	}
