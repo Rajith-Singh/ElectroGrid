@@ -31,7 +31,14 @@ public class crudservice {
 		
 		try {
 			PreparedStatement ps = con.prepareStatement(insert);
-			ps.setInt(1, user.getId());
+			if (user.getId()<=5) {
+				ps.setInt(1, user.getId()*5);
+
+			} else if (user.getId()<=10) {
+				ps.setInt(1, (5*5 + ((user.getId()-5)*10)));
+			} else {
+				ps.setInt(1, user.getId()*15);
+			}
 			ps.setString(2, user.getName());
 			ps.setLong(3, user.getAge());
 			

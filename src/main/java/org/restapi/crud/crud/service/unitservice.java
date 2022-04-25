@@ -6,7 +6,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
+
+import org.restapi.crud.crud.model.calcmodel;
+import org.restapi.crud.crud.model.crudmodel;
 import org.restapi.crud.crud.model.unitmodel;
 
 public class unitservice {
@@ -45,29 +49,108 @@ public class unitservice {
 		return unit;
 	}
 	
-//	public ArrayList<crudmodel> getUser() throws SQLException{
-//	
-//		ArrayList<crudmodel> data = new ArrayList<crudmodel>();
+	public ArrayList<unitmodel> getUnit() throws SQLException{
+	
+		ArrayList<unitmodel> data = new ArrayList<unitmodel>();
+		
+		String select = "select * from unit";
+		PreparedStatement ps = con.prepareStatement(select);
+		ResultSet rs = ps.executeQuery();
+		
+		while(rs.next()) {
+			unitmodel model = new unitmodel();
+			
+			model.setUnit_id(rs.getString("unit_id")); //column name
+			model.setNo_of_units(rs.getInt("no_of_units")); 
+			model.setUnit_price(rs.getDouble("unit_price"));
+			
+			data.add(model);
+			
+		}
+		
+		return data;
+	}
+	
+	
+	public ArrayList<calcmodel> getUnitsById(int id) throws SQLException{
+		
+		ArrayList<calcmodel> data = new ArrayList<calcmodel>();
+		
+		String select = "select * from consumption where id =?";
+		PreparedStatement ps = con.prepareStatement(select);
+		ps.setInt(1,id);
+		ResultSet rs = ps.executeQuery();
+		
+		if(rs.next()) {
+			calcmodel model = new calcmodel();
+			
+			model.setUnits(rs.getInt("consumeUnits")); //column name
+			
+			data.add(model);
+			
+		}
+		System.out.println(data);
+
+		return data;
+	}
+	
+//	public ArrayList<calcmodel> getUnitsById(int id) throws SQLException{
 //		
-//		String select = "select * from person";
+//		ArrayList<calcmodel> data = new ArrayList<>();
+//		
+//		String select = "select * from consumption where id =?";
 //		PreparedStatement ps = con.prepareStatement(select);
+//		ps.setInt(1,id);
 //		ResultSet rs = ps.executeQuery();
 //		
-//		while(rs.next()) {
-//			crudmodel model = new crudmodel();
+//		if(rs.next()) {
+//			int consumeunits = rs.getInt(5);
 //			
-//			model.setId(rs.getInt("id")); //column name
-//			model.setName(rs.getString("name")); 
-//			model.setAge(rs.getInt("age"));
+//			CalculateFactoty fac =new CalculateFactoty();
+//			UnitCalculation obj = fac.getUnitCalculation(consumeunits);
+//			double answ = obj.UnitCalculation(consumeunits);
+//			calcmodel data = new calcmodel(answ);
 //			
-//			data.add(model);
-//			
+//			data.add(data);
 //		}
-//		
+//		System.out.println(data);
+//
 //		return data;
 //	}
+	
+	
+//	public ArrayList<calcmodel> getUnitsById(int id) throws SQLException{
 //	
+//	ArrayList<calcmodel> data = new ArrayList<calcmodel>();
 //	
+//	String select = "select * from consumption where id =?";
+//	PreparedStatement ps = con.prepareStatement(select);
+//	ps.setInt(1,id);
+//	ResultSet rs = ps.executeQuery();
+//	
+//	if(rs.next()) {
+//		calcmodel model = new calcmodel();
+//		
+//		model.setUnits(rs.getInt("consumeUnits")); //column name
+//		
+//		data.add(model);
+//		
+//	}
+//	System.out.println(data);
+//
+//	return data;
+//}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 //	public ArrayList<crudmodel> getUserById(int id) throws SQLException{
 //		
 //		ArrayList<crudmodel> data = new ArrayList<crudmodel>();
