@@ -49,6 +49,8 @@ public class crudresource {
 	public crudmodel updateUser(crudmodel user) {
 		return service.updateUser(user);
 	}
+
+
 	
 	@Path("/deleteUnitById/{id}")
 	@DELETE
