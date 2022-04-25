@@ -35,6 +35,8 @@ public class crudresource {
 	public ArrayList<crudmodel> getUser() throws SQLException {
 		return service.getUser();
 	}
+
+
 	
 	@Path("/retrieveById/{id}")
 	@GET
