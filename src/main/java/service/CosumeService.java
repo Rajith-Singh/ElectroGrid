@@ -66,6 +66,9 @@ public class CosumeService {
 	 return output; 
 	}
 
+	
+	
+	
 	@DELETE
 	@Path("/consumedelete") 
 	@Consumes(MediaType.APPLICATION_XML) 
