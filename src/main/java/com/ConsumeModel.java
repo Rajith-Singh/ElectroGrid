@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Model {
-	
+public class ConsumeModel {
+
 	private Connection connect() 
 	 { 
 	 Connection con = null; 
@@ -22,25 +22,26 @@ public class Model {
 	 {e.printStackTrace();} 
 	 return con; 
 	 } 
-	public String insertService(String name, String nic, String address, String telNo, String accNo) 
+	public String insertService(String month, String pastUnits, String currentUnits, String consumeUnits) 
 	 { 
 	 String output = ""; 
 	 try
 	 { 
 	 Connection con = connect(); 
 	 if (con == null) 
-	 {return "Error while connecting to the database for inserting."; } 
+	 {
+		 return "Error while connecting to the database for inserting.";
+	 } 
 	 // create a prepared statement
-	 String query = " insert into person (`id`,`name`,`nic`,`address`,`telNo`, `accNo`)"
-	 + " values (?, ?, ?, ?, ?, ?)"; 
+	 String query = "insert into consumption (`id`,`month`,`pastUnits`,`currentUnits`,`consumeUnits`)"
+	 + " values (?, ?, ?, ?, ? )"; 
 	 PreparedStatement preparedStmt = con.prepareStatement(query); 
-	 // binding values
+	 // binding values 
 	 preparedStmt.setInt(1, 0); 
-	 preparedStmt.setString(2, name); 
-	 preparedStmt.setString(3, nic); 
-	 preparedStmt.setString(4, address); 
-	 preparedStmt.setString(5, telNo);
-	 preparedStmt.setString(6, accNo);
+	 preparedStmt.setString(2, month); 
+	 preparedStmt.setString(3, pastUnits); 
+	 preparedStmt.setString(4, currentUnits);
+	 preparedStmt.setString(5, consumeUnits);
 	 // execute the statement
 	 
 	 preparedStmt.execute(); 
@@ -62,34 +63,36 @@ public class Model {
 	 { 
 	 Connection con = connect(); 
 	 if (con == null) 
-	 {return "Error while connecting to the database for reading."; } 
+	 {
+		 return "Error while connecting to the database for reading.";
+	 } 
+	 
 	 // Prepare the html table to be displayed
-	 output = "<table border='1'><tr><th>User Id</th><th>Name</th>"+
-     "<th>NIC</th>" +
-	 "<th>Address</th>" + 
-	 "<th>Tel No</th>" +
-	 "<th>Account No</th>"+
+	 output = "<table border='1'>"+
+	 "<tr><th>Id</th>" + 
+	 "<th>month</th>"+
+    "<th>pastUnits</th>" +
+	 "<th>currentUnits</th>" + 
+	 "<th>consumeUnits</th>" +
 	 "<th>Update</th><th>Remove</th></tr>"; 
 	 
-	 String query = "select * from person"; 
+	 String query = "select * from consumption"; 
 	 Statement stmt = con.createStatement(); 
 	 ResultSet rs = stmt.executeQuery(query); 
 	 // iterate through the rows in the result set
 	 while (rs.next()) 
 	 { 
-	 String id = Integer.toString(rs.getInt("id")); 
-	 String name = rs.getString("name"); 
-	 String nic = rs.getString("nic"); 
-	 String address = rs.getString("address");
-	 String telNo = rs.getString("telNo");
-	 String accNo = rs.getString("accNo"); 
-	 // Add into the html table
-	 output += "<tr><td>" + id + "</td>"; 
-	 output += "<td>" + name + "</td>"; 
-	 output += "<td>" + nic + "</td>"; 
-	 output += "<td>" + address + "</td>";
-	 output += "<td>" + telNo + "</td>";
-	 output += "<td>" + accNo + "</td>";
+	 String id = Integer.toString(rs.getInt("id"));	 
+	 String month = rs.getString("month"); 
+	 String pastUnits = rs.getString("pastUnits");
+	 String currentUnits = rs.getString("currentUnits");
+	 String consumeUnits = rs.getString("consumeUnits"); 
+	 // Add Stringo the html table 
+	 output += "<tr><td>" + id + "</td>";
+	 output += "<td>" + month + "</td>"; 
+	 output += "<td>" + pastUnits + "</td>"; 
+	 output += "<td>" + currentUnits + "</td>";
+	 output += "<td>" + consumeUnits + "</td>";
 	 // buttons
 	 output += "<td><input name='btnUpdate' type='button' value='Update' class='btn btn-secondary'></td>"
 	 + "<td><form method='post' action='items.jsp'>"
@@ -109,35 +112,30 @@ public class Model {
 	 return output; 
 	 }
 
-<<<<<<< HEAD
-	public String updateService(String id, String name, String nic, String address, String telNo) 
-=======
-	public String updateService(String id, String name, String nic, String address, String telNo, String accNo) 
->>>>>>> 1b33ea6cc60afe1415bbd7d42c53bdaae4d17c5b
+	public String updateService(String id, String month, String pastUnits, String currentUnits, String consumeUnits ) 
 	 { 
 	 String output = ""; 
 	 try
 	 { 
 	 Connection con = connect(); 
 	 if (con == null) 
-	 {return "Error while connecting to the database for updating."; } 
+	 {
+		 return "Error while connecting to the database for updating."; 
+	 } 
 	 // create a prepared statement
-	 String query = "UPDATE person SET name=?, nic=?, address=?, telNo=?, accNo=? WHERE id=?"; 
+	 String query = "UPDATE consumption SET month=?, pastUnits=?, currentUnits=?, consumeUnits=?  WHERE id=?"; 
 	 PreparedStatement preparedStmt = con.prepareStatement(query); 
 	 // binding values
-	 preparedStmt.setString(1, name); 
-	 preparedStmt.setString(2, nic); 
-	 preparedStmt.setString(3, address); 
-	 preparedStmt.setString(4, telNo); 
-	 preparedStmt.setString(5, accNo);
-	 preparedStmt.setInt(6, Integer.parseInt(id));
+	 preparedStmt.setString(1, month); 
+	 preparedStmt.setString(2, pastUnits); 
+	 preparedStmt.setString(3, currentUnits); 
+	 preparedStmt.setString(4, consumeUnits);
+	 preparedStmt.setInt(5, Integer.parseInt(id));
 	 // execute the statement
 	 preparedStmt.execute(); 
 	 con.close(); 
 	 output = "Updated successfully"; 
-	 } 
-	 catch (Exception e) 
-	 { 
+	 } catch (Exception e) { 
 	 output = "Error while updating the details"; 
 	 System.err.println(e.getMessage()); 
 	 } 
@@ -151,9 +149,11 @@ public class Model {
 	 { 
 	 Connection con = connect(); 
 	 if (con == null) 
-	 {return "Error while connecting to the database for deleting."; } 
+	 {
+		 return "Error while connecting to the database for deleting."; 
+	 } 
 	 // create a prepared statement
-	 String query = "delete from person where id=?"; 
+	 String query = "delete from consumption where id=?"; 
 	 PreparedStatement preparedStmt = con.prepareStatement(query); 
 	 // binding values
 	 preparedStmt.setInt(1, Integer.parseInt(id)); 
@@ -170,4 +170,5 @@ public class Model {
 	 return output; 
 	 }
 
+	
 }
