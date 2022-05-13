@@ -22,7 +22,7 @@ public class Model {
 	 {e.printStackTrace();} 
 	 return con; 
 	 } 
-	public String insertService(String name, String nic, String address, String telNo) 
+	public String insertService(String name, String nic, String address, String telNo, String accNo) 
 	 { 
 	 String output = ""; 
 	 try
@@ -109,7 +109,11 @@ public class Model {
 	 return output; 
 	 }
 
+<<<<<<< HEAD
 	public String updateService(String id, String name, String nic, String address, String telNo) 
+=======
+	public String updateService(String id, String name, String nic, String address, String telNo, String accNo) 
+>>>>>>> 1b33ea6cc60afe1415bbd7d42c53bdaae4d17c5b
 	 { 
 	 String output = ""; 
 	 try
