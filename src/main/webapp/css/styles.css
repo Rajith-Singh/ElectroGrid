@@ -299,6 +299,8 @@
 .form input[type='password'],
 .form input[type='date'],
 .form input[type='time'],
+.form input[type='month'],
+.form input[type='number'],
 .form select,
 .form textarea {
   display: block;
