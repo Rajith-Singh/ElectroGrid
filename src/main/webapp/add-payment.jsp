@@ -44,13 +44,18 @@
          
          <form class="form">
          <h3>Enter Account Type</h3>
-            <div class="form-group">
-               <input type="text" placeholder=" Account-Type (Visa/Master)" name="accountType" required />
-            </div><br>
+         
+<select name="accountType">
+<option selected disabled value="">Choose...</option>
+  <option value="visa">Visa</option>
+  <option value="master">Master</option>
+  
+</select>
+
               <h3>Enter Amount</h3>
             <div class="form-group">
                <input type="text" placeholder=" Amount" name="amount" required />
-            </div><br>
+            </div>
               <h3>Enter Account No</h3>
             <div class="form-group">
                <input type="text" placeholder="Account No" name="accountNo" />
