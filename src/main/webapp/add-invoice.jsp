@@ -9,6 +9,7 @@
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 	  <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
+	  <link rel="stylesheet" href="css/styles2.css" />
       <link rel="stylesheet" href="css/styles.css" />
       <title>ElectroGrid</title>
    </head>
@@ -56,8 +57,86 @@
             
             <input type="submit" class="btn btn-primary my-1" />
             <a class="btn my-1" href="dashboard.html">Go Back</a>
-         </form>
+         </form> 
+         <br>
+         <center> <h1 class="large text-primary"> Unit Details </h1> </center>     
       </section>
+      
+      <!-- Unit details -->
+         
+      <div class="unit-container">
+      <div class="units-table unit_66">
+        <div class="units-header">
+          <div class="units">1 - 66</div>
+          <div class="title">66</div>
+        </div>
+        <ul class="units-list">
+          <li><strong>Unit consumed</strong> 33</li>
+          <div class="border"></div>
+          <li><strong>Unit Rate (Rs/kWh)</strong> 7.85 </li>
+          <div class="border"></div>
+        </ul>
+        <a href="#">Read more..</a>
+      </div>
+ 
+	  <div class="units-table unit_99">
+        <div class="units-header">
+          <div class="units">1 - 66</div>
+          <div class="title">66</div>
+        </div>
+        <ul class="units-list">
+          <li><strong>Unit consumed</strong> 33</li>
+          <div class="border"></div>
+          <li><strong>Unit Rate (Rs/kWh)</strong> 7.85 </li>
+          <div class="border"></div>
+        </ul>
+        <a href="#">Read more..</a>
+      </div>
+	  
+	  <div class="units-table unit_132">
+        <div class="units-header">
+          <div class="units">1 - 66</div>
+          <div class="title">66</div>
+        </div>
+        <ul class="units-list">
+          <li><strong>Unit consumed</strong> 33</li>
+          <div class="border"></div>
+          <li><strong>Unit Rate (Rs/kWh)</strong> 7.85 </li>
+          <div class="border"></div>
+        </ul>
+        <a href="#">Read more..</a>
+      </div>
+	  
+	  <div class="units-table unit_198">
+        <div class="units-header">
+          <div class="units">1 - 66</div>
+          <div class="title">66</div>
+        </div>
+        <ul class="units-list">
+          <li><strong>Unit consumed</strong> 33</li>
+          <div class="border"></div>
+          <li><strong>Unit Rate (Rs/kWh)</strong> 7.85 </li>
+          <div class="border"></div>
+        </ul>
+        <a href="#">Read more..</a>
+      </div>
+	  
+	  <div class="units-table unit_225">
+        <div class="units-header">
+          <div class="units">1 - 66</div>
+          <div class="title">66</div>
+        </div>
+        <ul class="units-list">
+          <li><strong>Unit consumed</strong> 33</li>
+          <div class="border"></div>
+          <li><strong>Unit Rate (Rs/kWh)</strong> 7.85 </li>
+          <div class="border"></div>
+        </ul>
+        <a href="#">Read more..</a>
+      </div>
+
+    </div>
+      <br><br><br>
       <footer class="footer">
          <p>Copyright <strong>ElectroGrid</strong> - All Rights Reserved</p>
       </footer>

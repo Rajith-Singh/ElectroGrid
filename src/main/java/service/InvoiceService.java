@@ -3,13 +3,11 @@ package service;
 import com.InvoiceModel;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 //For JSON
 import com.google.gson.*;
-
 
 //For XML
 import org.jsoup.*;
@@ -41,9 +39,16 @@ public class InvoiceService {
 //	@GET
 //	@Path("/readByID/{cus_nic}")
 //	@Produces(MediaType.TEXT_HTML)
-//	public String readByID() {
-//		return serviceObj.readByID();
+//	public String readByID(String cus_nic) {
+//		return serviceInvoice.readByID(cus_nic);
 //	}
+	
+	@Path("/readByID/{cus_nic}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String getInvoices(@PathParam("cus_nic") String cus_nic) {
+		return serviceInvoice.readByID(cus_nic);
+	}
 
 	@PUT
 	@Path("/updateInvoice")

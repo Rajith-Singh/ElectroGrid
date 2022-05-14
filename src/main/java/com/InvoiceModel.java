@@ -120,53 +120,50 @@ public class InvoiceModel {
 		return output;
 	}
 	
-//	public String readByID() {
-//		String output = "";
-//		try {
-//			Connection con = connect();
-//			if (con == null) {
-//				return "Error while connecting to the database for reading.";
-//			}
-//			// Prepare the HTML table to be displayed
-//			output = "<table border='1'>"
-//					+ "<th> Name </th>"
-//					+ "<th> Address </th>"
-//					+ "<th>Customer NIC</th>"
-//					+ "<th>Month</th>" 
-//					+ "<th>Total Amount</th></tr>";
-//
-//			String query = "select * from person p, invoice i where p.nic = i.cus_nic and i.cus_nic = ?";
+	public String readByID(String cus_nic) {
+		String output = "";
+		try {
+			Connection con = connect();
+			if (con == null) {
+				return "Error while connecting to the database for reading.";
+			}
+			// Prepare the HTML table to be displayed
+			output = "<table border='1'>"
+					+ "<th> Name </th>"
+					+ "<th> Address </th>"
+					+ "<th>Month</th>" 
+					+ "<th>Total Amount</th></tr>";
+
+			String query = "select * from person p, invoice i where p.nic = i.cus_nic and i.cus_nic = ?";
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1,cus_nic);
 //			Statement stmt = con.createStatement();
 //			ResultSet rs = stmt.executeQuery(query);
-//			// iterate through the rows in the result set
-//			while (rs.next()) {
-//				String id = Integer.toString(rs.getInt("id"));
-//				String name = rs.getString("name");
-//				String address = rs.getString("address");;				
+			ResultSet rs = ps.executeQuery();
+			// iterate through the rows in the result set
+			while (rs.next()) {
+				String id = Integer.toString(rs.getInt("id"));
+				String name = rs.getString("name");
+				String address = rs.getString("address");;				
 //				String cus_nic = rs.getString("cus_nic");
-//				String month = rs.getString("month");
-//				String unit_calculation = rs.getString("unit_calculation");
-//				// Add into the HTML table
-//				output += "<tr><td>" + name + "</td>";
-//				output += "<td>" + address + "</td>";
-//				output += "<td>" + cus_nic + "</td>";
-//				output += "<td>" + month + "</td>";
-//				output += "<td>" + unit_calculation + "</td>";
-//				// buttons
-//				output += "<td><input name='btnUpdate' type='button' value='Update' class='btn btn-secondary'></td>"
-//						+ "<td><form method='post' action='items.jsp'>"
-//						+ "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>"
-//						+ "<input name='itemID' type='hidden' value='" + id + "'>" + "</form></td></tr>";
-//			}
-//			con.close();
-//			// Complete the HTML table
-//			output += "</table>";
-//		} catch (Exception e) {
-//			output = "Error while reading the Details";
-//			System.err.println(e.getMessage());
-//		}
-//		return output;
-//	}
+				String month = rs.getString("month");
+				String unit_calculation = rs.getString("unit_calculation");
+				// Add into the HTML table
+				output += "<tr><td>" + name + "</td>";
+				output += "<td>" + address + "</td>";
+				output += "<td>" + month + "</td>";
+				output += "<td>" + unit_calculation + "</td>";
+				// buttons
+			}
+			con.close();
+			// Complete the HTML table
+			output += "</table>";
+		} catch (Exception e) {
+			output = "Error while reading the Details";
+			System.err.println(e.getMessage());
+		}
+		return output;
+	}
 
 	public String updateService(String id, String cus_nic, String month, Double unit_calculation) {
 		String output = "";
