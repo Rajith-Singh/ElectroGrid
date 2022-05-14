@@ -16,7 +16,8 @@
    </head>
 
    <body>
-      <nav class="navbar bg-dark">
+   
+      <nav class="navbar bg-dark"> 
          <h1>
             <a href="/ElectroGrid"> <i class="fa fa-power-off"> </i> ElectroGrid </a>
          </h1>
