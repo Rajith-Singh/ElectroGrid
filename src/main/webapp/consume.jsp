@@ -19,7 +19,7 @@
          </h1>
          <ul>
             <li>
-               <a href="profiles.html"> <i class="fa fa-id-badge"></i> <span class="ml-1">Register</span> </a>
+               <a href="sign-up.jsp"> <i class="fa fa-id-badge"></i> <span class="ml-1">Register</span> </a>
             </li>
             <li>
                <a href="consume.jsp" title="Dashboard"><i class="fas fa-user"></i> <span class="hide-sm ml-1">Consumption</span></a>
