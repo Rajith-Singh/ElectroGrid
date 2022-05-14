@@ -18,7 +18,7 @@
    <body>
       <nav class="navbar bg-dark">
          <h1>
-            <a href="#"> <i class="fa fa-bolt-lightning"> </i> ElectroGrid </a>
+            <a href="/ElectroGrid"> <i class="fa fa-power-off"> </i> ElectroGrid </a>
          </h1>
 
          <ul>
