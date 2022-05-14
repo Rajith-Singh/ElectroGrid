@@ -23,19 +23,19 @@
 			<a href="/ElectroGrid"><i class="fa fa-power-off"></i> ElectroGrid </a>
 		</h1>
 		<ul>
-			<li><a href="profiles.html"> <i class="fa fa-id-badge"></i>
+			<li><a href="sign-up.jsp"> <i class="fa fa-id-badge"></i>
 					<span class="ml-1">Register</span>
 			</a></li>
-			<li><a href="dashboard.html" title="Dashboard"><i
+			<li><a href="consume.jsp" title="Dashboard"><i
 					class="fa fa-hourglass"></i> <span class="hide-sm ml-1">Consumption</span></a>
 			</li>
-			<li><a href="notices-dashboard.html" title="Invoice"><i
+			<li><a href="add-invoice.jsp" title="Invoice"><i
 					class="fa fa-address-card"></i> <span class="hide-sm ml-1">Invoice</span></a></li>
-			<li><a href="notices-dashboard.html" title="Payment"><i
+			<li><a href="add-payment.jsp" title="Payment"><i
 					class="fa fa-credit-card"></i> <span class="hide-sm ml-1">Payment</span></a></li>
-			<li><a href="notices-dashboard.html" title="FAQ"><i
+			<li><a href="faq.jsp" title="FAQ"><i
 					class="fa fa-question"></i> <span class="hide-sm ml-1">FAQ</span></a></li>
-			<li><a href="login.html"> <i class="fas fa-sign-out-alt"></i>
+			<li><a href="/ElectroGrid"> <i class="fas fa-sign-out-alt"></i>
 					<span class="hide-sm">Logout</span>
 			</a></li>
 		</ul>
