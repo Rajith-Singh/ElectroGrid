@@ -17,23 +17,29 @@
          <h1>
             <a href="/ElectroGrid"><i class="fa fa-power-off"></i> ElectroGrid </a>
          </h1>
-       <ul>
-			<li><a href="sign-up.jsp"> <i class="fa fa-id-badge"></i>
-					<span class="ml-1">Register</span>
-			</a></li>
-			<li><a href="consume.jsp" title="Dashboard"><i
-					class="fa fa-hourglass"></i> <span class="hide-sm ml-1">Consumption</span></a>
-			</li>
-			<li><a href="add-invoice.jsp" title="Invoice"><i
-					class="fa fa-address-card"></i> <span class="hide-sm ml-1">Invoice</span></a></li>
-			<li><a href="add-payment.jsp" title="Payment"><i
-					class="fa fa-credit-card"></i> <span class="hide-sm ml-1">Payment</span></a></li>
-			<li><a href="faq.jsp" title="FAQ"><i
-					class="fa fa-question"></i> <span class="hide-sm ml-1">FAQ</span></a></li>
-			<li><a href="/ElectroGrid"> <i class="fas fa-sign-out-alt"></i>
-					<span class="hide-sm">Logout</span>
-			</a></li>
-		</ul>
+         <ul>
+            <li>
+               <a href="sign-up.jsp"> <i class="fa fa-id-badge"></i> <span class="ml-1">Register</span> </a>
+            </li>
+            <li>
+               <a href="consume.jsp" title="Dashboard"><i class="fas fa-user"></i> <span class="hide-sm ml-1">Consumption</span></a>
+            </li>
+            <li>
+               <a href="add-invoice.jsp" title="Invoice"><i class="fa fa-bell"></i> <span class="hide-sm ml-1">Invoice</span></a>
+            </li>
+            <li>
+               <a href="add-payment.jsp " title="Payment"><i class="fa fa-bell"></i> <span class="hide-sm ml-1">Payment</span></a>
+            </li>
+            <li>
+               <a href="faq.jsp" title="FAQ"><i class="fa fa-bell"></i> <span class="hide-sm ml-1">FAQ</span></a>
+            </li>
+            <li>
+               <a href="/ElectroGrid">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span class="hide-sm">Logout</span>
+               </a>
+            </li>
+         </ul>
          <i class="burger-icon fa fa-bars"></i>
       </nav>
       <section class="container">

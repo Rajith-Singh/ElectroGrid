@@ -16,14 +16,15 @@
    </head>
 
    <body>
-      <nav class="navbar bg-dark">
+   
+      <nav class="navbar bg-dark"> 
          <h1>
-            <a href="#"> <i class="fa fa-bolt-lightning"> </i> ElectroGrid </a>
+            <a href="/ElectroGrid"> <i class="fa fa-power-off"> </i> ElectroGrid </a>
          </h1>
 
          <ul>
             <li>
-               <a href="register.html"> <i class="fa fa-user-plus"></i> <span class="ml-1">Register</span> </a>
+               <a href="sign-up.jsp"> <i class="fa fa-user-plus"></i> <span class="ml-1">Register</span> </a>
             </li>
          </ul>
 
@@ -36,7 +37,7 @@
                <h1 class="x-large">ElectroGrid</h1>
                <p class="lead">Education is smart enough to change the human mind positively</p>
                <div class="button">
-                  <a href="register.html" class="btn btn-primary"> Sign Up </a>
+                  <a href="sign-up.jsp" class="btn btn-primary"> Sign Up </a>
                </div>
             </div>
          </div>

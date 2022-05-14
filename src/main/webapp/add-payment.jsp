@@ -19,8 +19,8 @@
          <h1>
             <a href="/ElectroGrid"><i class="fa fa-power-off"></i> ElectroGrid </a>
          </h1>
-         <ul>
-           <li><a href="profiles.html"> <i class="fa fa-id-badge"></i>
+      <ul>
+			<li><a href="sign-up.jsp"> <i class="fa fa-id-badge"></i>
 					<span class="ml-1">Register</span>
 			</a></li>
 			<li><a href="consume.jsp" title="Dashboard"><i
@@ -35,7 +35,7 @@
 			<li><a href="/ElectroGrid"> <i class="fas fa-sign-out-alt"></i>
 					<span class="hide-sm">Logout</span>
 			</a></li>
-         </ul>
+		</ul>
          <i class="burger-icon fa fa-bars"></i>
       </nav>
       <section class="container">
@@ -44,13 +44,18 @@
          
          <form class="form">
          <h3>Enter Account Type</h3>
-            <div class="form-group">
-               <input type="text" placeholder=" Account-Type (Visa/Master)" name="accountType" required />
-            </div><br>
+         
+<select name="accountType">
+<option selected disabled value="">Choose...</option>
+  <option value="visa">Visa</option>
+  <option value="master">Master</option>
+  
+</select>
+
               <h3>Enter Amount</h3>
             <div class="form-group">
                <input type="text" placeholder=" Amount" name="amount" required />
-            </div><br>
+            </div>
               <h3>Enter Account No</h3>
             <div class="form-group">
                <input type="text" placeholder="Account No" name="accountNo" />
