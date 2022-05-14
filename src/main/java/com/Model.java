@@ -109,15 +109,8 @@ public class Model {
 	 return output; 
 	 }
 
-<<<<<<< HEAD
 	public String updateService(String id, String name, String nic, String address, String telNo, String accNo) 
-=======
-<<<<<<< HEAD
-	public String updateService(String id, String name, String nic, String address, String telNo) 
-=======
-	public String updateService(String id, String name, String nic, String address, String telNo, String accNo) 
->>>>>>> 1b33ea6cc60afe1415bbd7d42c53bdaae4d17c5b
->>>>>>> 68c4fb19b0bdfa755e13e31a00b3aa40f6737fa6
+
 	 { 
 	 String output = ""; 
 	 try
