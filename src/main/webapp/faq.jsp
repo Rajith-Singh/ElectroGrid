@@ -27,14 +27,14 @@
 					<span class="ml-1">Register</span>
 			</a></li>
 			<li><a href="dashboard.html" title="Dashboard"><i
-					class="fas fa-user"></i> <span class="hide-sm ml-1">Consumption</span></a>
+					class="fa fa-hourglass"></i> <span class="hide-sm ml-1">Consumption</span></a>
 			</li>
 			<li><a href="notices-dashboard.html" title="Invoice"><i
-					class="fa fa-bell"></i> <span class="hide-sm ml-1">Invoice</span></a></li>
+					class="fa fa-address-card"></i> <span class="hide-sm ml-1">Invoice</span></a></li>
 			<li><a href="notices-dashboard.html" title="Payment"><i
-					class="fa fa-bell"></i> <span class="hide-sm ml-1">Payment</span></a></li>
+					class="fa fa-credit-card"></i> <span class="hide-sm ml-1">Payment</span></a></li>
 			<li><a href="notices-dashboard.html" title="FAQ"><i
-					class="fa fa-bell"></i> <span class="hide-sm ml-1">FAQ</span></a></li>
+					class="fa fa-question"></i> <span class="hide-sm ml-1">FAQ</span></a></li>
 			<li><a href="login.html"> <i class="fas fa-sign-out-alt"></i>
 					<span class="hide-sm">Logout</span>
 			</a></li>
