@@ -110,7 +110,7 @@ public class Model {
 	 }
 
 	public String updateService(String id, String name, String nic, String address, String telNo, String accNo) 
-
+	
 	 { 
 	 String output = ""; 
 	 try
